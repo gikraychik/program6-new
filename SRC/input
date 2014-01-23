@@ -47,7 +47,7 @@ timerMSec = 62500;
 standTimer = 750;
 adminTimer = 750;
 timer = 30000;
-maxDes = 30; minDes = 10;
+maxDes = 30; minDes = 15;
 oldVol = 10;
 init x = t3 + voltage + checkSum == 243;
 x = x ? 4 : 2;
@@ -155,11 +155,12 @@ init highVoltage = (voltage >= 8);
 rele3 = highVoltage ? 0 : 1;
 delete highVoltage;
 
+init comp = compar;
+if (comp) { rele2 = 0; }
+
 ind4 = rele2 ? 1 : 0;
 ind1 = rele4 ? 1 : 0;
 
-init comp = compar;
-if (comp) { rele2 = 0; }
 delete comp;
 
 s2 = rele2; s3 = rele3; s4 = rele4;
