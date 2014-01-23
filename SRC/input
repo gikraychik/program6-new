@@ -156,7 +156,7 @@ rele3 = highVoltage ? 0 : 1;
 delete highVoltage;
 
 init comp = compar;
-if (comp) { rele2 = 0; }
+if (comp) { rele2 = 0; timer = 30000; }
 
 ind4 = rele2 ? 1 : 0;
 ind1 = rele4 ? 1 : 0;
