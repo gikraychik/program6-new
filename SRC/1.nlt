@@ -1,0 +1,2 @@
+INCLUDE(regs.inc)
+IMOVE(1, NETLIST_SELECT)
